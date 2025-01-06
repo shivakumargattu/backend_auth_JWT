@@ -12,6 +12,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Route for checking API status
+app.get('/', (req, res) => {
+    res.send('API is working');
+  });
+  
+
 // Public routes
 app.use('/api/auth', authRoutes);
 
